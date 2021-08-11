@@ -17,8 +17,16 @@
             <br />
             <button @click="getPrice(ticker)">Search</button>
             <h2>{{ tickerUpper }}</h2>
-            <p>Current Price: {{ results }}</p>
+            <p>Current Price: {{ sResults }}</p>
             <p>Day Change: {{ dayChange }}</p>
+        </div>
+        <div id="cry">
+            <h1>Crypto Lookup</h1>
+            <input v-model='crypto' type="text" id="crypto" v-on:keyup.enter="getCrypto(crypto)" />
+            <br />
+            <button @click='getCrypto(crypto)'>Search</button>
+            <h2>{{ cryptoUpper }}</h2>
+            <p>{{ cResults }}</p>
         </div>
 
 
